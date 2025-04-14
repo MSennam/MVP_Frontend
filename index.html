@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/scripts.js"></script>
+
+    <!-- scriptis.js e styles.css se encontram com / para testes-->
+    <title>API de gerênciamento de formações</title>
+</head>
+<body>
+    <header>
+        <div class="title">
+            <h1>Gerenciador de Formações</h1>
+        </div>
+    </header>
+    
+    <!-- Adicionando uma nova formação-->
+    <section class="novaFormacao">
+        <input type="text" id="newInput" placeholder="Nova formação:">
+        <select id="newTipo" name="tipo">
+            <option value="Presencial">Presencial</option>
+            <option value="Semi-presencial">Semi-presencial</option>
+            <option value="EAD">EAD</option>
+        </select>
+        <input type="text" id="newTime" placeholder="Carga horária:">
+        <input type="text" id="newPrice" placeholder="Preço">
+        <select id="newStatus" name="atividade">
+            <option value="ATIVO">ATIVO</option>
+            <option value="INATIVO">INATIVO</option>
+        </select>
+        <button onclick="novaFormacao()" class="addBtn">Adicionar</button>
+    </section>
+
+    <!--Apresentação das formações já cadastradas-->
+    <section class="formacoes">
+        <table id="minhaFormacao">
+            <tr>
+                <th>Nome da formação</th>
+                <th>Tipo</th>
+                <th>Carga horária</th>
+                <th>Preço</th>
+                <th>Situação</th>
+            </tr>
+
+        </table>
+        
+
+            
+
+<!-- Modal para adicionar ementa -->
+<div id="ementaModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="fecharModal()">&times;</span>
+    <h2>Adicionar Ementa</h2>
+    <textarea id="ementaTexto" placeholder="Digite a ementa aqui..."></textarea>
+    <button onclick="enviarEmenta()">Salvar Ementa</button>
+  </div>
+</div>
+
+</body>
+</html>
